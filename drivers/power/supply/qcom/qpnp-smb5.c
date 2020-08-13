@@ -27,7 +27,6 @@
 #include <linux/iio/consumer.h>
 #include <linux/pmic-voter.h>
 #include "smb5-reg.h"
-#include "smb5-lib.h"
 #include "schgm-flash.h"
 
 #ifdef VENDOR_EDIT

@@ -21,7 +21,6 @@
 #include <linux/pmic-voter.h>
 #include <linux/of_batterydata.h>
 #include <linux/ktime.h>
-#include "smb5-lib.h"
 #include "smb5-reg.h"
 #include "schgm-flash.h"
 #include "step-chg-jeita.h"
@@ -38,6 +37,10 @@
 #include "../../oppo/oppo_short.h"
 #include "../../oppo/oppo_adapter.h"
 #include <linux/gpio.h>
+#endif
+#ifdef VENDOR_EDIT
+/* Yichun.Chen  PSW.BSP.CHG  2018-05-10  use oppo battery */
+        bool bat_thermal_1k = false;
 #endif
 
 #ifdef VENDOR_EDIT
@@ -100,6 +103,11 @@ static void smbchg_set_chargerid_switch_val(int value)
 #define smblib_err(chg, fmt, ...)		\
 	pr_err("%s: %s: " fmt, chg->name,	\
 		__func__, ##__VA_ARGS__)	\
+
+#ifdef VENDOR_EDIT
+/* Yichun.Chen  PSW.BSP.CHG  2018-05-10  use oppo battery */
+#define NONSTD_BAT_ID_OHM       151000
+#endif
 
 #ifdef VENDOR_EDIT
 /* Jianchao.Shi@BSP.CHG.Basic, 2017/03/15, sjc Add for OTG debug */

@@ -48,37 +48,8 @@
 #include <linux/msm_bcl.h>
 #endif
 #include <soc/oppo/boot_mode.h>
-#ifdef CONFIG_OPPO_MSM8953N_CHARGER
-#include "charger_ic/oppo_battery_msm8953_N.h"
-#elif defined CONFIG_OPPO_MSM8953_CHARGER
-#include "charger_ic/oppo_battery_msm8953.h"
-#elif defined CONFIG_OPPO_MSM8998_CHARGER
-#include "charger_ic/oppo_battery_msm8998.h"
-#elif defined CONFIG_OPPO_MSM8998O_CHARGER
-#include "charger_ic/oppo_battery_msm8998_O.h"
-#elif defined CONFIG_OPPO_SDM845_CHARGER
-#include "charger_ic/oppo_battery_sdm845.h"
-#elif defined CONFIG_OPPO_SDM670_CHARGER
-#include "charger_ic/oppo_battery_sdm670.h"
-#elif defined CONFIG_OPPO_SDM670P_CHARGER
-#include "charger_ic/oppo_battery_sdm670P.h"
-#elif defined CONFIG_OPPO_SM8150_CHARGER
-#include "charger_ic/oppo_battery_msm8150.h"
-#elif defined CONFIG_OPPO_SM8150_PRO_CHARGER
-#include "charger_ic/oppo_battery_msm8150_pro.h"
-#elif defined CONFIG_OPPO_SM6125_CHARGER
-#include "charger_ic/oppo_battery_sm6125P.h"
-#elif defined CONFIG_OPPO_SM6125Q_CHARGER
 #include "charger_ic/oppo_battery_sm6125Q.h"
-#elif defined CONFIG_OPPO_SM7150_CHARGER
-#include "charger_ic/oppo_battery_sm7150_P.h"
-#elif defined CONFIG_OPPO_SDM670Q_CHARGER
-#include "charger_ic/oppo_battery_sdm670Q.h"
-#else /* CONFIG_OPPO_MSM8953_CHARGER */
-#include "charger_ic/oppo_battery_msm8976.h"
-#endif /* CONFIG_OPPO_MSM8953_CHARGER */
-#endif /* CONFIG_OPPO_CHARGER_MTK */
-
+#endif
 #define CHG_LOG_CRTI 1
 #define CHG_LOG_FULL 2
 
